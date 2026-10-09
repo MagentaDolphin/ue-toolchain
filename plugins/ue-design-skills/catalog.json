@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Design-review skills for Unreal Engine 5.6 projects. Norms plus reproducible detection recipes for silent architectural failures.",
   "author": "MagentaDolphin",
-  "publisher": "Kodlo.art",
+  "publisher": "MagentaDolphin",
   "license": "CC-BY-ND-4.0",
   "license_note": "Prose is CC BY-ND 4.0. This file, .claude-plugin/plugin.json, everything under _gate/ and the shell commands inside Detect fields are Apache-2.0. Format adapters, translations and private adaptation are permitted; see LICENSE for the exact grants.",
   "about": "Harness-neutral index of this bundle. Every skill is a directory holding SKILL.md (YAML frontmatter plus Markdown body) and a references/ folder. No agent runtime is required to read them: point any harness at the entry path, or load the whole directory as context. The vendor manifest under .claude-plugin/ is one adapter over this catalog, not the source of truth.",

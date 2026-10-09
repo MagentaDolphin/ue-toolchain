@@ -154,7 +154,7 @@ The bundle does not execute reviews automatically, modify a UE project, prove th
 ### Links
 
 - Repository: [https://github.com/MagentaDolphin/ue-toolchain](https://github.com/MagentaDolphin/ue-toolchain)
-- Author: **MagentaDolphin**; publisher recorded by the catalog: **Kodlo.art**
+- Author: **MagentaDolphin**; publisher recorded by the catalog: **MagentaDolphin**
 
 ## Русский
 
@@ -308,4 +308,4 @@ python3 _gate/test_gate.py
 ### Ссылки
 
 - Репозиторий: [https://github.com/MagentaDolphin/ue-toolchain](https://github.com/MagentaDolphin/ue-toolchain)
-- Автор: **MagentaDolphin**; издатель, указанный в каталоге: **Kodlo.art**
+- Автор: **MagentaDolphin**; издатель, указанный в каталоге: **MagentaDolphin**
