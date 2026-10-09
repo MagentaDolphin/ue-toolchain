@@ -1,0 +1,16 @@
+{
+  "name": "ue-design-skills",
+  "version": "0.1.0",
+  "description": "Design-review skills for Unreal Engine 5.6 projects: modular gameplay, GAS, input, UI, messaging, tags, network authority, cosmetics, settings, asset loading, streaming budgets, allocation. Norms plus reproducible failure-mode detection recipes.",
+  "author": {
+    "name": "MagentaDolphin"
+  },
+  "license": "CC-BY-ND-4.0",
+  "keywords": [
+    "unreal-engine",
+    "ue5",
+    "gameplay-ability-system",
+    "game-features",
+    "architecture-review"
+  ]
+}

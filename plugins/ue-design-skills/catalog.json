@@ -1,0 +1,199 @@
+{
+  "schema": "ue-skills-catalog/1",
+  "name": "ue-design-skills",
+  "version": "0.1.0",
+  "description": "Design-review skills for Unreal Engine 5.6 projects. Norms plus reproducible detection recipes for silent architectural failures.",
+  "author": "MagentaDolphin",
+  "publisher": "Kodlo.art",
+  "license": "CC-BY-ND-4.0",
+  "license_note": "Prose is CC BY-ND 4.0. This file, .claude-plugin/plugin.json, everything under _gate/ and the shell commands inside Detect fields are Apache-2.0. Format adapters, translations and private adaptation are permitted; see LICENSE for the exact grants.",
+  "about": "Harness-neutral index of this bundle. Every skill is a directory holding SKILL.md (YAML frontmatter plus Markdown body) and a references/ folder. No agent runtime is required to read them: point any harness at the entry path, or load the whole directory as context. The vendor manifest under .claude-plugin/ is one adapter over this catalog, not the source of truth.",
+  "skills": [
+    {
+      "id": "ue-reference-project-adoption",
+      "path": "skills/ue-reference-project-adoption",
+      "entry": "skills/ue-reference-project-adoption/SKILL.md",
+      "description": "Classify what you borrow from a reference or sample project as defect, showcase stub, deliberate scope narrowing, architecture tax or foreign legacy, then decide copy/close/skip per element.",
+      "use_when": "Starting a project from a template, lifting a subsystem out of a sample, reviewing code copied from one, or explaining why a setting copied from the reference does nothing.",
+      "references": [
+        "skills/ue-reference-project-adoption/references/patterns.md",
+        "skills/ue-reference-project-adoption/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-multiplayer-authority",
+      "path": "skills/ue-multiplayer-authority",
+      "entry": "skills/ue-multiplayer-authority/SKILL.md",
+      "description": "Design and review the authority model of a networked game: who owns each fact, what is predicted versus replicated versus validated, RPC and validation discipline, hit registration, replication modes, relevancy and the cheat surface.",
+      "use_when": "Starting a multiplayer feature, porting single-player code to network, reviewing trust boundaries, or investigating desync, rubber-banding, \"works in the editor but not on a dedicated server\", or suspected cheating.",
+      "references": [
+        "skills/ue-multiplayer-authority/references/patterns.md",
+        "skills/ue-multiplayer-authority/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-gameplay-cues",
+      "path": "skills/ue-gameplay-cues",
+      "entry": "skills/ue-gameplay-cues/SKILL.md",
+      "description": "Design and review the GameplayCue presentation layer: cue forms and addressing routes, static versus actor notifies, the dedicated-server rule, cue discovery and loading cost, registering cue paths from feature plugins, teardown, and the tag-to-asset validation gap.",
+      "use_when": "Adding VFX or audio feedback to abilities or effects, decoupling presentation from gameplay assets, debugging a cue that never fires or never stops, or auditing cue loading cost.",
+      "references": [
+        "skills/ue-gameplay-cues/references/patterns.md",
+        "skills/ue-gameplay-cues/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-gameplay-tag-governance",
+      "path": "skills/ue-gameplay-tag-governance",
+      "entry": "skills/ue-gameplay-tag-governance/SKILL.md",
+      "description": "Govern gameplay tags as a typed vocabulary rather than loose strings: declaration sources, namespace design, constraining tag inputs, exact versus hierarchical matching, redirects and renaming, replicating a tag registry, tag-driven counters, and auditing an existing inventory.",
+      "use_when": "Adding a tag namespace, wiring systems through tags, reviewing tag usage, or debugging a tag-driven feature that silently does nothing.",
+      "references": [
+        "skills/ue-gameplay-tag-governance/references/patterns.md",
+        "skills/ue-gameplay-tag-governance/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-gameplay-messaging",
+      "path": "skills/ue-gameplay-messaging",
+      "entry": "skills/ue-gameplay-messaging/SKILL.md",
+      "description": "Design and review a tag-addressed publish/subscribe message bus: bus scope and lifetime, typed payloads and runtime type checks, exact versus partial channel matching, listener handles and ownership, parity between native and visual-script APIs, and the boundary between local messaging and replication.",
+      "use_when": "Decoupling gameplay from UI, feedback, telemetry or processors, or debugging duplicate, stale, mismatched or wrongly replicated messages.",
+      "references": [
+        "skills/ue-gameplay-messaging/references/patterns.md",
+        "skills/ue-gameplay-messaging/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-modular-gameplay",
+      "path": "skills/ue-modular-gameplay",
+      "entry": "skills/ue-modular-gameplay/SKILL.md",
+      "description": "Design and review modular gameplay: experience definitions, feature plugins, reusable action sets, feature actions and their rollback, actor extension handlers, component init-state chains, asset bundles by role, and runtime activation and deactivation.",
+      "use_when": "Adding game modes, seasonal or downloadable features, modular components, abilities, input or UI, or fixing initialization-order and feature teardown bugs.",
+      "references": [
+        "skills/ue-modular-gameplay/references/patterns.md",
+        "skills/ue-modular-gameplay/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-gas-architecture",
+      "path": "skills/ue-gas-architecture",
+      "entry": "skills/ue-gas-architecture/SKILL.md",
+      "description": "Design and review a production Gameplay Ability System layer: ability packages and revocation receipts, buffered ability input, activation policies and exclusivity groups, attribute set responsibilities, effect contexts, tag relationship policy, match phases as abilities, and the health/death seam.",
+      "use_when": "Adding combat, abilities, equipment-granted powers, phases or rounds, damage and healing, or diagnosing ability activation and lifecycle bugs.",
+      "references": [
+        "skills/ue-gas-architecture/references/patterns.md",
+        "skills/ue-gas-architecture/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-input-architecture",
+      "path": "skills/ue-input-architecture",
+      "entry": "skills/ue-input-architecture/SKILL.md",
+      "description": "Design and review Enhanced Input architecture: physical mapping contexts, semantic input tags, native versus ability paths, per-frame buffering, player-mappable settings, device switching, and runtime injection and removal of input by feature plugins.",
+      "use_when": "Adding controls, rebinding, gamepad or touch support, ability input, mode-specific input, or debugging an action that binds correctly and never fires.",
+      "references": [
+        "skills/ue-input-architecture/references/patterns.md",
+        "skills/ue-input-architecture/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-ui-architecture",
+      "path": "skills/ue-ui-architecture",
+      "entry": "skills/ue-ui-architecture/SKILL.md",
+      "description": "Design and review scalable game UI: one root layout per local player, tagged layer stacks for modality, extension points that let features contribute widgets without depending on the shell, input and focus policy per screen, and centrally arbitrated loading screens.",
+      "use_when": "Building HUD, menu or modal architecture, adding mode or plugin UI without base-class dependencies, supporting gamepad or local multiplayer, or debugging focus, widget ordering, duplicate widgets and teardown.",
+      "references": [
+        "skills/ue-ui-architecture/references/patterns.md",
+        "skills/ue-ui-architecture/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-data-driven-architecture",
+      "path": "skills/ue-data-driven-architecture",
+      "entry": "skills/ue-data-driven-architecture/SKILL.md",
+      "description": "Design and review a data-driven definition layer: composition layers, data assets versus zero-node class defaults versus instanced fragments, reference semantics and asset bundles, the code/data boundary, and the validation a data graph needs because it compiles regardless.",
+      "use_when": "Adding game modes, pawn archetypes, ability packages, item or equipment definitions, playlists or feature plugins, or when a manager is accumulating a branch per variant.",
+      "references": [
+        "skills/ue-data-driven-architecture/references/patterns.md",
+        "skills/ue-data-driven-architecture/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-cosmetics-and-teams",
+      "path": "skills/ue-cosmetics-and-teams",
+      "entry": "skills/ue-cosmetics-and-teams/SKILL.md",
+      "description": "Design and review modular character cosmetics and team systems: replicated cosmetic intent with local realization, controller-owned selection versus pawn-owned realization, dedicated-server exclusion, tag-driven mesh and animation selection, one authoritative team identifier with subscribed mirrors, and a single damage policy shared by authority and prediction.",
+      "use_when": "Building skins, modular characters, team assignment, friendly fire, hit-marker filtering, or team-coloured UI and effects.",
+      "references": [
+        "skills/ue-cosmetics-and-teams/references/patterns.md",
+        "skills/ue-cosmetics-and-teams/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-game-settings-architecture",
+      "path": "skills/ue-game-settings-architecture",
+      "entry": "skills/ue-game-settings-architecture/SKILL.md",
+      "description": "Design and review a settings layer: setting models separated from widgets, reflection-backed property paths and their cost, declarative edit conditions, apply and cancel as a transaction, machine-local versus player-shared persistence, scalability and device profiles, benchmark wiring, and sampled performance statistics.",
+      "use_when": "Adding video, audio, input or accessibility settings, cloud saves, quality presets, frame-rate modes, device tuning, or performance overlays.",
+      "references": [
+        "skills/ue-game-settings-architecture/references/patterns.md",
+        "skills/ue-game-settings-architecture/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-asset-loading-and-memory",
+      "path": "skills/ue-asset-loading-and-memory",
+      "entry": "skills/ue-asset-loading-and-memory/SKILL.md",
+      "description": "Audit asset loading and CPU memory residency: reference semantics and transitive closure, asset bundles and cook rules, load handle ownership, synchronous load hitches, startup sequencing, garbage-collection reachability, retention leaks and unload paths.",
+      "use_when": "Reducing load times or memory, choosing reference types, adding content-pulling definitions, diagnosing boot or transition hitches, or investigating objects that are never collected.",
+      "references": [
+        "skills/ue-asset-loading-and-memory/references/patterns.md",
+        "skills/ue-asset-loading-and-memory/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-streaming-and-platform-budgets",
+      "path": "skills/ue-streaming-and-platform-budgets",
+      "entry": "skills/ue-streaming-and-platform-budgets/SKILL.md",
+      "description": "Audit GPU and streaming budgets: separating disk, CPU memory, video memory and the streaming pool; console-variable priority and device profiles; texture groups and scalability buckets; quality clamps; and the lifetime of streamed level content.",
+      "use_when": "Targeting a platform memory ceiling, tuning quality tiers, adding a background or preview level, or investigating why a quality setting has no effect on some hardware.",
+      "references": [
+        "skills/ue-streaming-and-platform-budgets/references/patterns.md",
+        "skills/ue-streaming-and-platform-budgets/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-runtime-allocation-and-caching",
+      "path": "skills/ue-runtime-allocation-and-caching",
+      "entry": "skills/ue-runtime-allocation-and-caching/SKILL.md",
+      "description": "Audit runtime allocation, pooling and caching: pointers stored into container storage, unbounded caches, pool lifecycle, per-frame churn in paint and tick paths, protocol identifier discipline, and which cost axis a replication change actually moves.",
+      "use_when": "Profiling hitches, chasing memory that grows during a session, reviewing effect or UI churn, or deciding how to reduce replicated object count.",
+      "references": [
+        "skills/ue-runtime-allocation-and-caching/references/patterns.md",
+        "skills/ue-runtime-allocation-and-caching/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-architecture-guardrails",
+      "path": "skills/ue-architecture-guardrails",
+      "entry": "skills/ue-architecture-guardrails/SKILL.md",
+      "description": "Cross-system review of a modular architecture: seven invariants, an ownership ledger, lifecycle as a transaction, context keys, data-graph validation, temporal dependencies, observability, the false-genericity test, and a risk-based integration matrix with a go/no-go rule.",
+      "use_when": "Before adopting a modular architecture, at design review, before enabling runtime feature switching, during an engine upgrade, or when indirect systems have become hard to debug.",
+      "references": [
+        "skills/ue-architecture-guardrails/references/patterns.md",
+        "skills/ue-architecture-guardrails/references/failure-modes.md"
+      ]
+    },
+    {
+      "id": "ue-evidence-discipline",
+      "path": "skills/ue-evidence-discipline",
+      "entry": "skills/ue-evidence-discipline/SKILL.md",
+      "description": "How to produce and check claims about a codebase so they can be trusted later: separating measured from derived from open, why an empty search proves the pattern rather than the absence, verifying a headline claim yourself, treating a delegated report as raw material, and only publishing recipes that have been run.",
+      "use_when": "Auditing a codebase, reviewing someone else's audit, adopting a reference project, or writing any document that will be quoted back at you. Read this before the other skills in this bundle.",
+      "references": [
+        "skills/ue-evidence-discipline/references/failure-modes.md"
+      ]
+    }
+  ]
+}

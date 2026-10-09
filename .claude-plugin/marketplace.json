@@ -1,0 +1,29 @@
+{
+  "name": "ue-toolchain",
+  "owner": {
+    "name": "MagentaDolphin"
+  },
+  "metadata": {
+    "description": "Unreal Engine tooling for LLM agents: design-review skills, an editor bridge and an MCP server.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "ue-design-skills",
+      "source": "./plugins/ue-design-skills",
+      "description": "Design-review skills for Unreal Engine 5.6 projects: norms plus reproducible detection recipes for silent architectural failures.",
+      "version": "0.1.0",
+      "author": {
+        "name": "MagentaDolphin"
+      },
+      "license": "CC-BY-ND-4.0",
+      "keywords": [
+        "unreal-engine",
+        "ue5",
+        "gameplay-ability-system",
+        "game-features",
+        "architecture-review"
+      ]
+    }
+  ]
+}

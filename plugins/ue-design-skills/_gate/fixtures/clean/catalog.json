@@ -1,0 +1,14 @@
+{
+  "schema": "ue-skills-catalog/1",
+  "name": "sample-plugin",
+  "description": "Gate fixture catalog. Clean baseline, not shipped.",
+  "skills": [
+    {
+      "id": "sample-skill",
+      "path": "skills/sample-skill",
+      "entry": "skills/sample-skill/SKILL.md",
+      "description": "Gate fixture skill proving the catalog contract holds.",
+      "use_when": "Never in production; this entry exists so the baseline has one valid row."
+    }
+  ]
+}
